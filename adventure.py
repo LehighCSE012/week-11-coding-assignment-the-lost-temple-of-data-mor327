@@ -1,3 +1,10 @@
+"""
+Adventure Parser Module
+
+Processes artifact data, temple location notes, and journal entries
+from the Lost Temple of Azmar expedition led by Dr. Evelyn Reed.
+"""
+
 import re
 import pandas as pd
 
