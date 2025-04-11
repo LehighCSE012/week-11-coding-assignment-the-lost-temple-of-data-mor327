@@ -1,5 +1,5 @@
-import pandas as pd
 import re
+import pandas as pd
 
 def load_artifact_data(excel_filepath):
     """
@@ -44,7 +44,7 @@ def extract_journal_dates(journal_text):
     # Only include dates with valid MM and DD
     valid_dates = []
     for date in candidates:
-        mm, dd, yyyy = map(int, date.split("/"))
+        mm, dd, _ = map(int, date.split("/"))
         if 1 <= mm <= 12 and 1 <= dd <= 31:
             valid_dates.append(date)
 
