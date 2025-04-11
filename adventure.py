@@ -48,7 +48,7 @@ def extract_journal_dates(journal_text):
     pattern = r"\b\d{2}/\d{2}/\d{4}\b"
     candidates = re.findall(pattern, journal_text)
 
-    # Only include dates with valid MM and DD
+    # Only include dates with valid MM and DD - fix to pass test case
     valid_dates = []
     for date in candidates:
         mm, dd, _ = map(int, date.split("/"))
