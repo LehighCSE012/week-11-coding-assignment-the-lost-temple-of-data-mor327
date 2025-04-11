@@ -38,8 +38,10 @@ def extract_journal_dates(journal_text):
     Returns:
         list[str]: A list of date strings found in the text.
     """
-    dates = re.findall(r"\b\d{2}/\d{2}/\d{4}\b", journal_text)
-    return dates
+    def extract_journal_dates(journal_text):
+    pattern = r"\b(0[1-9]|1[0-2])/(0[1-9]|[12]\d|3[01])/(\d{4})\b"
+    matches = re.findall(pattern, journal_text)
+    return [f"{month}/{day}/{year}" for month, day, year in matches]
 
 def extract_secret_codes(journal_text):
     """
